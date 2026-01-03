@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>PD Navigation</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <h1>Find Your Animal</h1>
+      <button id="backBtn" class="btn" style="display:none;">← Back</button>
+    </header>
+
+    <p id="hint" class="hint">Tap your animal on the map.</p>
+
+    <main class="card">
+      <!-- Map screen -->
+      <section id="mapScreen" class="mapWrap" aria-label="Map">
+        <img id="mainMap" src="assets/main-map.png" alt="Building map with animal locations" />
+        <button class="hotspot" style="left:61.591%; top:15.291%; width:7.587%;" aria-label="hippo" data-animal="hippo"></button>
+        <button class="hotspot" style="left:90.622%; top:88.023%; width:7.460%;" aria-label="bunny" data-animal="bunny"></button>
+        <button class="hotspot" style="left:84.353%; top:25.930%; width:7.712%;" aria-label="iguana" data-animal="iguana"></button>
+        <button class="hotspot" style="left:47.945%; top:22.151%; width:8.472%;" aria-label="beetle" data-animal="beetle"></button>
+        <button class="hotspot" style="left:77.450%; top:88.023%; width:7.460%;" aria-label="croc" data-animal="croc"></button>
+        <button class="hotspot" style="left:24.815%; top:67.498%; width:7.840%;" aria-label="giraffe" data-animal="giraffe"></button>
+        <button class="hotspot" style="left:34.111%; top:67.493%; width:7.966%;" aria-label="bird" data-animal="bird"></button>
+        <button class="hotspot" style="left:74.394%; top:3.184%; width:7.460%;" aria-label="ladybug" data-animal="ladybug"></button>
+        <button class="hotspot" style="left:59.800%; top:43.779%; width:9.231%;" aria-label="tortoise" data-animal="tortoise"></button>
+        <button class="hotspot" style="left:26.185%; top:46.572%; width:7.334%;" aria-label="frog" data-animal="frog"></button>
+        <button class="hotspot" style="left:54.900%; top:61.628%; width:8.472%;" aria-label="mouse" data-animal="mouse"></button>
+        <button class="hotspot" style="left:74.182%; top:37.384%; width:8.851%;" aria-label="fish" data-animal="fish"></button>
+      </section>
+
+      <!-- Route screen -->
+      <section id="routeScreen" class="route" style="display:none;" aria-label="Route">
+        <h2 id="routeTitle"></h2>
+        <img id="routeImg" alt="" />
+      </section>
+    </main>
+
+    <details class="fallback">
+      <summary>Can’t tap the picture? Tap your animal here.</summary>
+      <div class="chips" aria-label="Animal list">
+        <button class="chip" data-animal="hippo">Hippo</button><button class="chip" data-animal="bunny">Bunny</button><button class="chip" data-animal="iguana">Iguana</button><button class="chip" data-animal="beetle">Beetle</button><button class="chip" data-animal="croc">Croc</button><button class="chip" data-animal="giraffe">Giraffe</button><button class="chip" data-animal="bird">Bird</button><button class="chip" data-animal="ladybug">Ladybug</button><button class="chip" data-animal="tortoise">Tortoise</button><button class="chip" data-animal="frog">Frog</button><button class="chip" data-animal="mouse">Mouse</button><button class="chip" data-animal="fish">Fish</button>
+      </div>
+    </details>
+
+    <p class="footnote">Tip: you can also open a specific route by adding <code>#hippo</code> to the URL (example: <code>#hippo</code>).</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

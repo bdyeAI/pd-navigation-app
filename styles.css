@@ -1,0 +1,52 @@
+:root { color-scheme: light; }
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: #fafafa; }
+
+.wrap { max-width: 980px; margin: 0 auto; padding: 14px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+h1 { font-size: 20px; margin: 10px 0; }
+.hint { margin: 0 0 10px; color: #666; font-size: 14px; }
+
+.card { border: 1px solid #ddd; border-radius: 16px; overflow: hidden; background: #fff; }
+.mapWrap { position: relative; }
+.mapWrap img { width: 100%; height: auto; display: block; }
+
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+
+  /* invisible but tappable */
+  background: rgba(0,0,0,0);
+  border: 2px solid rgba(0,0,0,0);
+
+  /* improve tap behavior */
+  touch-action: manipulation;
+}
+
+.hotspot:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+  border-color: rgba(0,0,0,0.2);
+}
+
+.route { padding: 12px; }
+.route h2 { margin: 6px 0 10px; font-size: 18px; }
+.route img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid #eee; }
+
+.btn, .chip, summary {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+.btn { white-space: nowrap; }
+.fallback { margin-top: 12px; }
+.fallback > summary { cursor: pointer; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.footnote { margin: 12px 0 0; color: #666; font-size: 13px; }
+code { background: #f1f1f1; padding: 2px 6px; border-radius: 8px; }
